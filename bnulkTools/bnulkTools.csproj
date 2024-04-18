@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>E:\bnulkTools\</PublishUrl>
+    <PublishUrl>D:\bnulkTools\release\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,8 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -93,14 +92,36 @@
     <Compile Include="Common\Form_ConvertData_Dlg.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form_ForMixBasisSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form_ForMixBasisSet.Designer.cs">
+      <DependentUpon>Form_ForMixBasisSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorInfo\DisposeError_App.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FundamentalConstants\Atoms.cs" />
+    <Compile Include="FundamentalConstants\PhysConst.cs" />
+    <Compile Include="FundamentalConstants\Struct.cs" />
     <Compile Include="Gaussian\App\ReadOuts.cs" />
     <Compile Include="Gaussian\App\ReadTdaSteepProcess.cs" />
+    <Compile Include="Gaussian\GaussianData.cs" />
+    <Compile Include="Gaussian\InputFile\GaussianInputPackage2ZhangCang_Tools.cs" />
+    <Compile Include="Gaussian\InputFile\ReadGaussianInputFile_App.cs" />
+    <Compile Include="Gaussian\OniomTools\ActivateHighLevelPeripheralAtoms.cs" />
+    <Compile Include="Gaussian\OniomTools\Form_ActivateHighLevelPeripheralAtoms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gaussian\OniomTools\Form_ActivateHighLevelPeripheralAtoms.Designer.cs">
+      <DependentUpon>Form_ActivateHighLevelPeripheralAtoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gaussian\OniomTools\FreezeLowLevel.cs" />
+    <Compile Include="Gaussian\OniomTools\FreezeNonHydrogenAtom.cs" />
     <Compile Include="Gaussian\ReadGaussianOut.cs" />
     <Compile Include="Help\Form_About.cs">
       <SubType>Form</SubType>
@@ -114,13 +135,20 @@
     <Compile Include="Help\Form_Gaussian_ReadOuts.Designer.cs">
       <DependentUpon>Form_Gaussian_ReadOuts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Molecule\NormalData_1_MoleculeSpecification.cs" />
     <Compile Include="Output\WriteOutput.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Common\Form_ConvertData.resx" />
     <EmbeddedResource Include="Common\Form_ConvertData_Dlg.resx" />
+    <EmbeddedResource Include="Common\Form_ForMixBasisSet.resx">
+      <DependentUpon>Form_ForMixBasisSet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gaussian\OniomTools\Form_ActivateHighLevelPeripheralAtoms.resx">
+      <DependentUpon>Form_ActivateHighLevelPeripheralAtoms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help\Form_About.resx">
       <DependentUpon>Form_About.cs</DependentUpon>
@@ -138,6 +166,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="FundamentalConstants\periodic-table-2017-crop.pdf" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

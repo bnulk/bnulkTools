@@ -52,5 +52,49 @@ namespace bnulkTools
             Gaussian.App.ReadTdaSteepProcess readTdaSteepProcess = new Gaussian.App.ReadTdaSteepProcess();
             readTdaSteepProcess.Run();
         }
+
+        private void button_mixedBasisSet_Click(object sender, EventArgs e)
+        {
+            Common.Form_ForMixBasisSet form_ForMixBasisSet = new Common.Form_ForMixBasisSet();
+            form_ForMixBasisSet.ShowDialog();
+        }
+
+        private void button_FreezeNonHydrogenAtom_Click(object sender, EventArgs e)
+        {
+            Gaussian.OniomTools.FreezeNonHydrogenAtom freezeNonHydrogenAtom= new Gaussian.OniomTools.FreezeNonHydrogenAtom();
+            freezeNonHydrogenAtom.Run();
+        }
+
+        private void TDDFT_Steep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_ActivateHighLevelPeripheralAtoms_Click(object sender, EventArgs e)
+        {
+            Gaussian.OniomTools.ActivateHighLevelPeripheralAtoms activateHighLevelPeripheralAtoms= new Gaussian.OniomTools.ActivateHighLevelPeripheralAtoms();
+            activateHighLevelPeripheralAtoms.Run();
+        }
+
+        private void gaussianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button_FreezeLowLevel_Click(object sender, EventArgs e)
+        {
+            Gaussian.OniomTools.FreezeLowLevel freezeLowLevel= new Gaussian.OniomTools.FreezeLowLevel();
+            freezeLowLevel.Run();
+        }
+
+        private void button_FreezeMediumLowLevel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
